@@ -3,3 +3,14 @@ logging:
     dateformat: MM-dd HH:mm:ss:SSS
   level:
     com.itheima: debug
+
+spring:
+  rabbitmq:
+    host: 192.168.101.68
+    port: 5672
+    virtual-host: /hmall
+    username: hmall
+    password: 123
+#    listener:
+#      simple:
+#        prefetch: 1 # [能者多劳模式, 消息处理得越快, 获取的消息越多]每次只能获取一条消息，处理完成才能获取下一个消息
