@@ -1,0 +1,13 @@
+package com.itheima.common.rabbitmq;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class CommonRabbitmqApplicationTests {
+
+    @Test
+    void contextLoads() {
+    }
+
+}

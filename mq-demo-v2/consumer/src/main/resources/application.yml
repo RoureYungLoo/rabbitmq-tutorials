@@ -1,0 +1,25 @@
+spring:
+  rabbitmq:
+    host: 192.168.101.68 # 你的虚拟机IP
+    port: 5672 # 端口
+    virtual-host: /hmall # 虚拟主机
+    username: hmall # 用户名
+    password: 123 # 密码
+    listener:
+      simple:
+        acknowledge-mode: auto # 自动ack
+#        acknowledge-mode: manual # 自动ack
+        retry:
+          enabled: true # 开启消费者失败重试
+          initial-interval: 1000ms # 初识的失败等待时长为1秒
+          multiplier: 1 # 失败的等待时长倍数，下次等待时长 = 上次等待时长 * multiplier
+          max-attempts: 3 # 最大重试次数
+  redis:
+    host: 192.168.101.68
+    port: 6379
+    password: redis
+logging:
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+  level:
+    com.itheima: debug
